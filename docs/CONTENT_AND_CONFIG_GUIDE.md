@@ -1,3 +1,11 @@
+# V2 configuration update
+
+V2 overrides earlier unconfirmed-address guidance below. src/config/server.ts confirms play.TadhanaSMP.com for Java and Bedrock, Bedrock port 25706, no explicit Java display port. src/config/store.ts owns the exact official merchant. src/config/community.ts owns public guild/channel IDs. src/data/ranks.ts contains the owner-confirmed V2 snapshot with all thresholds. Keep actual CMI/store reconciliation separate from the snapshot.
+
+Update reviewed rule data in src/data/rules.ts, with actual source message IDs, reviewed flags and revision dates. Bot announcement setup is separate from OAuth and requires ANNOUNCEMENTS_ENABLED and a private DISCORD_INGEST_HMAC_SECRET. STATUS_SOURCE defaults to mcstatus, not a blank custom endpoint. Maintenance notice and scheduled maintenance are independent of online/offline probes. See the five V2 setup guides for current instructions.
+
+## Retained V1 editing reference
+
 # Content and configuration guide
 
 ## Edit verified values in one place

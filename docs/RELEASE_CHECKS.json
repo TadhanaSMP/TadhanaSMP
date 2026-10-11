@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-11",
+  "typecheck": "passed",
+  "lint": "passed",
+  "unitTests": 37,
+  "productionBuild": "passed",
+  "productionSmokeAssertions": 181,
+  "relayHttpRejectionCases": 8,
+  "decodedImages": 64,
+  "sourceFilesCredentialScan": 104,
+  "sourceCredentialPatternFindings": 0,
+  "clientPrivateSettingFindings": 0,
+  "runtimeDependencyFindings": 0,
+  "developmentDependencyHighFindings": 4,
+  "freshV2BrowserAudit": "unavailable",
+  "liveDatabaseBotTests": "pending owner staging",
+  "directUpload": "not performed, manual upload requested"
+}

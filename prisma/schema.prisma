@@ -34,3 +34,21 @@ model RateLimitBucket {
   expiresAt DateTime
   @@index([expiresAt])
 }
+
+model Announcement {
+ messageId String @id
+ guildId String
+ channelId String
+ body String
+ pinned Boolean @default(false)
+ postedAt DateTime
+ eventAt BigInt
+ deletedAt DateTime?
+ syncedAt DateTime @default(now())
+ @@index([deletedAt, postedAt])
+}
+model RelayReceipt {
+ nonceHash String @id
+ expiresAt DateTime
+ @@index([expiresAt])
+}

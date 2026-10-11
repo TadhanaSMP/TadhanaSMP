@@ -1,65 +1,74 @@
-# TadhanaSMP
+# TadhanaSMP V2
 
-A complete Next.js App Router website for the TadhanaSMP Minecraft community. The cinematic homepage, 16 public pages, responsive gallery, edition-specific play guide, rank journey, and retained Discord API contracts use the supplied official branding and real community screenshots.
+Complete Next.js 16 / React / TypeScript source for manual GitHub and Vercel deployment. No direct upload or deployment was performed.
 
-This is source code for manual GitHub and Vercel deployment. It has not been deployed to production. Authentication defaults to disabled; public pages build and run without a database or Discord secrets. Missing connection details, live status, announcements, store links, and rank requirements stay honest rather than showing invented values.
+V2 preserves the cinematic original branding, real community screenshots and existing authentication API contracts. It adds independent Java/Bedrock monitoring, a secure Discord announcement receiver and feed, both public rules views, exact rank thresholds and official store links. Missing integrations are clearly labeled.
 
-## Start locally
+## Start
 
-Install Node.js 24 LTS, then open a terminal in the `tadhanasmp` folder containing package.json:
+Install Node.js 24 LTS. Open a terminal in the folder containing package.json. On Windows copy .env.example to .env.local through your file manager.
 
 ```bash
 npm ci
-cp .env.example .env.local
 npm run dev
 ```
 
-Open http://localhost:3000. The example environment contains harmless placeholders only. Do not enable authentication until the security and Discord checklists are complete. On Windows, copy .env.example to .env.local using your file manager rather than the `cp` command. Keep private environment files off GitHub.
+Open http://localhost:3000. .env.example contains placeholders. AUTH_ENABLED=false and ANNOUNCEMENTS_ENABLED=false are safe defaults. Public pages work without a database or Discord secrets.
 
 ```bash
 npm run verify
+node scripts/relay-security-smoke.mjs
 ```
 
-This runs type checking, ESLint, 21 security/configuration unit tests, a production build, and a production HTTP smoke test. `npm run smoke` starts its own temporary production server and stops it afterward. Browser checks and external integration limits are documented separately in docs/QA_REPORT.md.
+Verification runs type checks, lint, 37 unit tests, production build and a temporary production HTTP smoke server. The separate relay smoke uses generated test credentials and rejects requests before database access. Neither script needs production secrets. Browser and integration limits are in docs/QA_REPORT.md.
 
-## Website routes
+## Routes
 
-| Route                            | Purpose                                                       |
-| -------------------------------- | ------------------------------------------------------------- |
-| `/`                              | Cinematic community introduction                              |
-| `/our-story`                     | Filipino roots and community story                            |
-| `/world`                         | Editorial archive of real builds and landscapes               |
-| `/features`                      | Grounded survival/community feature guide                     |
-| `/play`                          | Java and Bedrock instructions and connection details          |
-| `/memories`                      | Search, category filters, accessible high-resolution lightbox |
-| `/ranks`                         | Nine earnable gameplay ranks                                  |
-| `/news`                          | Owner-approved announcements; honest empty state initially    |
-| `/news/[slug]`                   | Published/historical articles only                            |
-| `/rules`                         | Clearly marked proposed community guidelines                  |
-| `/faq`                           | Practical joining and support questions                       |
-| `/status`                        | Manual maintenance priority and approved live status          |
-| `/support`                       | Official support route and gated Discord verification         |
-| `/store`                         | Approved external merchant only; initially unavailable        |
-| `/privacy`, `/terms`, `/cookies` | Privacy/terms drafts and factual necessary-cookie information |
+| Route | Purpose |
+| --- | --- |
+| / | Cinematic home and announcement excerpts |
+| /our-story | Community story |
+| /world | Real build showcase |
+| /features | Gameplay guide |
+| /play | Java/Bedrock join and copy instructions |
+| /memories | Gallery, search, filters and accessible viewer |
+| /ranks | Nine gameplay ranks and three optional premiums |
+| /news | Discord mirror and editorial archive |
+| /news/[slug] | Approved editorial articles only |
+| /rules | Both public rules collections |
+| /rules/server | Server Rules |
+| /rules/staff | Staff Rules |
+| /faq | Help and troubleshooting |
+| /status | Independent edition probes and separate maintenance |
+| /support | Support and gated Discord verification |
+| /store | Official external merchant information |
+| /privacy, /terms, /cookies | Policy drafts and cookie facts |
 
-Legacy `/about`, `/join`, and `/gallery` redirect permanently to `/our-story`, `/play`, and `/memories`. No events page is fabricated without real approved events. All eight original API paths remain, plus `/api/status`; see the source audit for contracts.
+/about, /join and /gallery retain permanent redirects. All eight original API paths remain. New public read APIs: /api/server-status and /api/announcements. /api/status remains compatible. New private signed receiver: /api/announcements/ingest. No admin dashboard, fake checkout or fake player data.
 
-## Before public release
+## Before launch
 
-Confirm current Java/Bedrock addresses, ports, supported versions, maintenance state, Discord invite, socials, and canonical domain. Verify the retained Discord invite; its current validity was not established. Approve rules, image rights, legal/operator facts, and store details. Rotate potentially exposed credentials from the original shared Drive material before enabling integrations. Run database migration and OAuth/bot tests in staging with fresh credentials before production.
+Read START_HERE.md. Java is play.TadhanaSMP.com. Bedrock uses the same hostname and port 25706. Store is https://store.tadhanasmp.com. Confirm live availability, current supported versions, DNS, invite validity and actual CMI/store settings. Rule text requires approved source messages. Legal pages require operator facts and review. Revoke the exposed incoming Discord webhook and rotate potentially shared credentials.
 
-The candidate canonical URL remains `https://www.tadhanasmp.com`. Ownership and DNS have not been changed or verified. Development-only dependency findings are recorded in the security audit; a clean runtime audit does not certify the entire application.
+The existing bot must be extended on its own host using scripts/discord-announcement-relay.mjs and a durable retry queue. A backed-up Postgres database needs the additive migration before enabling the receiver. Authentication has a separate staging checklist. No migrations or live bot changes were made here.
 
-## Owner guides
+## Guides
 
-- [Existing source audit](docs/EXISTING_SITE_AUDIT.md)
-- [Asset manifest](docs/ASSET_MANIFEST.md)
-- [Design system](docs/DESIGN_SYSTEM.md)
-- [Content and configuration](docs/CONTENT_AND_CONFIG_GUIDE.md)
-- [Security audit and secret rotation](docs/SECURITY_AUDIT_AND_SECRET_ROTATION.md)
-- [Discord OAuth and OTP checklist](docs/DISCORD_OAUTH_AND_OTP_CHECKLIST.md)
-- [Cookies, privacy, and terms review](docs/COOKIES_PRIVACY_TERMS_REVIEW.md)
-- [Manual GitHub and Vercel deployment](docs/DEPLOYMENT_VERCEL_GITHUB.md)
-- [QA report](docs/QA_REPORT.md)
+- docs/DEPLOYMENT_VERCEL_GITHUB.md
+- docs/CONTENT_AND_CONFIG_GUIDE.md
+- docs/SERVER_STATUS_SETUP.md
+- docs/DISCORD_ANNOUNCEMENTS_SETUP.md
+- docs/PUBLIC_RULES_SYNC.md
+- docs/RANK_SOURCE_AND_SYNC.md
+- docs/WEBHOOK_SECRET_ROTATION.md
+- docs/SECURITY_AUDIT_AND_SECRET_ROTATION.md
+- docs/DISCORD_OAUTH_AND_OTP_CHECKLIST.md
+- docs/COOKIES_PRIVACY_TERMS_REVIEW.md
+- docs/ASSET_MANIFEST.md
+- docs/EXISTING_SITE_AUDIT.md
+- docs/DESIGN_SYSTEM.md
+- docs/QA_REPORT.md
 
-Only npm is supported and package-lock.json is authoritative. Direct dependencies are pinned; Node stays on the supported 24.x LTS family. Original source archives remain in the supplied inputs; the distributable includes optimized selected screenshots, all 18 official branding originals, and complete inventory hashes. It excludes private source files, databases, installed packages, build output, and temporary QA routes.
+Use only npm and package-lock.json. Node is pinned to 24.x, dependencies use exact versions and Prisma generation is included. Vercel uses Next.js preset, npm ci, npm run build and default output directory. GitHub CI is supplied but has not run on GitHub.
+
+The ZIP excludes credentials, private environments, databases, installed dependencies, .next, logs and temporary QA routes. Source snapshots and audit history do not certify real integrations or current browser behavior.

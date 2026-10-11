@@ -4,7 +4,7 @@ No GitHub push, Vercel deployment, migration, domain switch, or DNS change was p
 
 ## 1. Prepare the source
 
-Extract TadhanaSMP-Website-Source.zip. Open the tadhanasmp folder containing package.json. Install Node.js 24 LTS. Vercel’s [official supported-runtime page](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions) lists 24.x; package.json fixes that major rather than an open-ended engine range.
+Extract TadhanaSMP-V2-Website-Source.zip. Open the tadhanasmp folder containing package.json. Install Node.js 24 LTS. Vercel’s [official supported-runtime page](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions) lists 24.x; package.json fixes that major rather than an open-ended engine range.
 
 ```bash
 npm ci
@@ -36,13 +36,13 @@ The checked-in vercel.json already provides framework/install/build commands and
 
 ## 4. Configure environments
 
-For a first preview, set AUTH_ENABLED=false, keep STORE_ACTIVE=false and PREMIUM_RANKS_PUBLISHED=false, and use the preview’s approved canonical strategy. Add verified public variables from .env.example: SITE_URL, edition addresses/ports, versions, maintenance, DISCORD_INVITE_URL/ACTIVE, optional approved status endpoint, and social/content configuration. Never add private values with NEXT_PUBLIC prefixes. Environment changes require a new deployment because many pages are prerendered.
+For a first preview, set AUTH_ENABLED=false, keep ANNOUNCEMENTS_ENABLED=false, and use the preview’s approved canonical strategy. Add verified public variables from .env.example: SITE_URL, edition addresses/ports, versions, maintenance, DISCORD_INVITE_URL/ACTIVE, independent status settings and optional trusted monitoring endpoints, and social/content configuration. Never add private values with NEXT_PUBLIC prefixes. Environment changes require a new deployment because many pages are prerendered.
 
 When preparing authentication, configure the nine private integration variables only in the intended Vercel environment. Use new credentials, a separate staging database, and a stable staging callback. Review exposure/rotation first. Run reviewed migrations separately against the correct database before enabling auth; builds must not migrate production automatically. Read DISCORD_OAUTH_AND_OTP_CHECKLIST.md and follow its fresh/existing database distinction.
 
 ## 5. Verify the preview
 
-Check all 16 public routes, permanent legacy redirects, missing-page behavior, icons/social preview, mobile and desktop menus, Java/Bedrock details, real copy success/fallback, gallery categories/search/empty results/lightbox/arrows/Escape/focus, rank tabs, FAQ, cookie preferences, and reduced motion. Confirm maintenance overrides status and there is no fake player count or unapproved product pricing.
+Check all 18 public routes, permanent legacy redirects, missing-page behavior, icons/social preview, mobile and desktop menus, Java/Bedrock details, real copy success/fallback, gallery categories/search/empty results/lightbox/arrows/Escape/focus, rank tabs, FAQ, cookie preferences, and reduced motion. Confirm maintenance notices remain separate from independent probe results and there is no fake player count or unapproved product pricing.
 
 Confirm HTTPS and security headers. Test metadata/canonical links on actual URLs. Review noindex draft rules/privacy/terms/store/support, sitemap, robots, and external destinations. Open the retained Discord invite to establish current validity. Run the full OAuth/bot/role/expiry/replay/concurrency/limit checklist against staging before enabling production credentials.
 
@@ -72,3 +72,7 @@ For rollback, disable authentication first when integrations are uncertain, then
 | Origin failure                   | Browser URL origin equals SITE_URL; preview and production settings are separate                                |
 | Status unavailable               | Endpoint approved/HTTPS/schema/timeout; unknown is intentional when no endpoint exists                          |
 | Old addresses/notices after edit | Redeploy to rebuild prerendered public content                                                                  |
+
+## V2 receiver
+
+Read DISCORD_ANNOUNCEMENTS_SETUP.md. Apply the additive announcement migration only after backup/schema review. Bot relay runs on its existing host, not Vercel. Rotate the separate HMAC key privately and test staging before enabling ANNOUNCEMENTS_ENABLED. Upload the hidden .github workflow if you want automatic build checks. CI was not executed on GitHub during this task.
