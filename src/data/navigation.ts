@@ -1,3 +1,4 @@
+import { store } from "@/config/store";
 export const navigation = [
   {
     label: "Explore",
@@ -14,8 +15,9 @@ export const navigation = [
       { label: "How to play", href: "/play" },
       { label: "Rank journey", href: "/ranks" },
       { label: "News", href: "/news" },
-      { label: "Server rules", href: "/rules" },
-      { label: "Store", href: "/store" },
+      { label: "Server Rules", href: "/rules/server" },
+      { label: "Staff Rules", href: "/rules/staff" },
+      { label: "Store", href: store.officialUrl },
     ],
   },
   {

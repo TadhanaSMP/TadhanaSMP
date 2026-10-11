@@ -22,6 +22,7 @@ const child = spawn(
     env: {
       ...process.env,
       AUTH_ENABLED: "false",
+      ANNOUNCEMENTS_ENABLED: "false",
       SITE_URL: "https://smoke.example.test",
     },
     stdio: ["ignore", "pipe", "pipe"],
@@ -65,6 +66,8 @@ try {
     "/ranks",
     "/news",
     "/rules",
+    "/rules/server",
+    "/rules/staff",
     "/faq",
     "/status",
     "/support",
@@ -179,6 +182,19 @@ try {
     503,
   );
   checks++;
+  const feed = await get("/api/announcements");
+  assert.equal(feed.status, 200);
+  assert.equal((await feed.json()).state, "pending");
+  assert.equal((await get("/api/announcements?page=99")).status, 400);
+  assert.equal((await get("/api/announcements/ingest",{method:"POST"})).status,503);
+  checks += 4;
+  const dual = await (await get("/api/server-status")).json();
+  assert.equal(dual.java.host,"play.TadhanaSMP.com");
+  assert.equal(dual.java.port,null);
+  assert.equal(dual.bedrock.host,"play.TadhanaSMP.com");
+  assert.equal(dual.bedrock.port,25706);
+  assert.ok(!("totalPlayers" in dual));
+  checks += 5;
   const status = await (await get("/api/status")).json();
   assert.ok(
     ["unknown", "maintenance", "online", "offline"].includes(status.state),

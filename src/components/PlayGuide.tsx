@@ -14,7 +14,7 @@ export function PlayGuide({
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
   const java = edition === "java";
   const address = java ? config.javaAddress : config.bedrockAddress;
-  const javaValue = `${config.javaAddress}${config.javaPort ? `:${config.javaPort}` : ""}`;
+  const javaValue = config.javaAddress;
   const ready = !!address && (java || !!config.bedrockPort);
   const steps = java
     ? [

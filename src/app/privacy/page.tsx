@@ -59,6 +59,8 @@ export default function Privacy() {
           approves a retention and revocation policy. Access is restricted to
           the backend; credentials and codes must not be placed in public logs.
         </p>
+        <h2>Public announcement mirror</h2>
+        <p>When configured, the existing Discord bot sends selected public channel announcements to the website. The website stores message IDs, sanitized text, source channel IDs, dates, pin state and sync times. Deleted posts become empty tombstones to prevent delayed updates from restoring removed content. Personal author profiles and attachment files are not copied. Retention and request handling need operator approval. Source links lead back to Discord.</p>
         <h2>External services and technical logs</h2>
         <p>
           Discord handles its own accounts and services under its own policies.

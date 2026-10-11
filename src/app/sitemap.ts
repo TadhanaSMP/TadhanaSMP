@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { ruleCollections } from "@/data/rules";
 import { site } from "@/config/site";
 import { publicUpdates } from "@/data/updates";
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -14,7 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/faq",
     "/status",
     "/cookies",
-    ...(site.rulesApproved ? ["/rules"] : []),
+    ...(ruleCollections.server.reviewed ? ["/rules", "/rules/server"] : []),
+    ...(ruleCollections.staff.reviewed ? ["/rules/staff"] : []),
     ...(site.legalReviewed ? ["/privacy", "/terms"] : []),
   ];
   return [

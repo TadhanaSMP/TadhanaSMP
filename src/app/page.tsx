@@ -1,3 +1,4 @@
+import { AnnouncementFeed } from "@/components/AnnouncementFeed";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -25,7 +26,7 @@ export default function Home() {
   const config = readPublicConfig();
   const latest = publicUpdates()[0];
   const java = config.javaAddress
-    ? `${config.javaAddress}${config.javaPort ? `:${config.javaPort}` : ""}`
+    ? config.javaAddress
     : "";
   return (
     <>
@@ -80,8 +81,7 @@ export default function Home() {
           </div>
           <div className="hero-meta">
             <StatusIndicator
-              maintenance={config.maintenance}
-              notice={config.maintenanceNotice}
+              config={config}
             />
             <span className="hero-meta-divider" />
             <Link href="/play?edition=java">
@@ -351,6 +351,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <section className="container home-announcements"><h2>From the community.</h2><AnnouncementFeed compact /></section>
       <section className="closing-scene">
         <WorldImage
           id="town-gathering"

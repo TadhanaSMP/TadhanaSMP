@@ -1,10 +1,11 @@
 "use client";
 import { useRef, useState } from "react";
-import { ranks } from "@/data/ranks";
+import { ranks, rankSource } from "@/data/ranks";
 import { Sparkles, ArrowRight } from "lucide-react";
 export function RankJourney() {
   const [selected, setSelected] = useState(0);
   const tabs = useRef<(HTMLButtonElement | null)[]>([]);
+  if (!rankSource.active) return <p>Gameplay rank publication is paused. Check /rankup in game.</p>;
   return (
     <div className="rank-journey">
       <div className="rank-tabs" role="tablist" aria-label="Gameplay ranks">
@@ -59,6 +60,7 @@ export function RankJourney() {
             {ranks[selected].requirements ||
               "Current requirements are being reviewed. Check /rankup in game for the approved progression."}
           </p>
+          <dl className="rank-metrics">{ranks[selected].metrics.map(metric => <div key={metric.label}><dt>{metric.label}</dt><dd>{metric.value.toLocaleString("en-PH")}</dd></div>)}</dl>
           <p className="small muted">
             {ranks[selected].perks ||
               "Benefits will appear here when confirmed by the server team."}

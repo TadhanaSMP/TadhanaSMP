@@ -1,22 +1,4 @@
-export const ranks = [
-  "NewComer",
-  "Traveler",
-  "Settler",
-  "Explorer",
-  "Adventurer",
-  "Pioneer",
-  "Guardian",
-  "Champion",
-  "Vanguard",
-].map((name, index) => ({
-  name,
-  index,
-  requirements: null as string | null,
-  perks: null as string | null,
-}));
-export const premiumRanks = [
-  { name: "Ascendant", price: 199 },
-  { name: "Mythic", price: 299 },
-  { name: "Legend", price: 499 },
-];
+export const rankSource = { revision: "Owner-confirmed V2 snapshot, 11 October 2026", url: "https://docs.google.com/spreadsheets/d/1wd0g6fM2M6kNGBFqOqgNhUJQuEdHympXHINBY_VPk80/edit", tab: "IN-GAME AND PREMIUM RANKS", active: true } as const;
+export const ranks = [{"name": "NewComer", "index": 0, "metrics": [], "requirements": "Default rank. Follow the official account verification process.", "perks": null}, {"name": "Traveler", "index": 1, "metrics": [{"label": "MoneyCost", "value": 500}, {"label": "Playtime (hours)", "value": 2}, {"label": "Distance traveled", "value": 1500}, {"label": "Monster kills", "value": 25}], "requirements": "Meet every requirement below. MoneyCost uses in-game economy currency.", "perks": null}, {"name": "Settler", "index": 2, "metrics": [{"label": "MoneyCost", "value": 3000}, {"label": "Playtime (hours)", "value": 8}, {"label": "Jobs combined total level", "value": 8}, {"label": "Blocks mined", "value": 5000}, {"label": "Blocks placed", "value": 3000}, {"label": "Items crafted", "value": 500}], "requirements": "Meet every requirement below. MoneyCost uses in-game economy currency.", "perks": null}, {"name": "Explorer", "index": 3, "metrics": [{"label": "MoneyCost", "value": 10000}, {"label": "Playtime (hours)", "value": 20}, {"label": "Jobs combined total level", "value": 20}, {"label": "Distance traveled", "value": 15000}, {"label": "Blocks mined", "value": 15000}, {"label": "Monster kills", "value": 150}, {"label": "Villager trades", "value": 15}], "requirements": "Meet every requirement below. MoneyCost uses in-game economy currency.", "perks": null}, {"name": "Adventurer", "index": 4, "metrics": [{"label": "MoneyCost", "value": 30000}, {"label": "Playtime (hours)", "value": 50}, {"label": "Jobs combined total level", "value": 40}, {"label": "Distance traveled", "value": 40000}, {"label": "Blocks mined", "value": 40000}, {"label": "Monster kills", "value": 500}, {"label": "Animals bred", "value": 30}], "requirements": "Meet every requirement below. MoneyCost uses in-game economy currency.", "perks": null}, {"name": "Pioneer", "index": 5, "metrics": [{"label": "MoneyCost", "value": 65000}, {"label": "Playtime (hours)", "value": 90}, {"label": "Jobs combined total level", "value": 70}, {"label": "Distance traveled", "value": 80000}, {"label": "Blocks mined", "value": 80000}, {"label": "Blocks placed", "value": 25000}, {"label": "Items crafted", "value": 5000}, {"label": "Animals bred", "value": 100}], "requirements": "Meet every requirement below. MoneyCost uses in-game economy currency.", "perks": null}, {"name": "Guardian", "index": 6, "metrics": [{"label": "MoneyCost", "value": 130000}, {"label": "Playtime (hours)", "value": 150}, {"label": "Jobs combined total level", "value": 110}, {"label": "Distance traveled", "value": 150000}, {"label": "Blocks mined", "value": 130000}, {"label": "Blocks placed", "value": 50000}, {"label": "Monster kills", "value": 2500}, {"label": "Items enchanted", "value": 50}], "requirements": "Meet every requirement below. MoneyCost uses in-game economy currency.", "perks": null}, {"name": "Champion", "index": 7, "metrics": [{"label": "MoneyCost", "value": 240000}, {"label": "Playtime (hours)", "value": 220}, {"label": "Jobs combined total level", "value": 160}, {"label": "Distance traveled", "value": 250000}, {"label": "Blocks mined", "value": 200000}, {"label": "Blocks placed", "value": 100000}, {"label": "Items crafted", "value": 20000}, {"label": "Monster kills", "value": 5000}], "requirements": "Meet every requirement below. MoneyCost uses in-game economy currency.", "perks": null}, {"name": "Vanguard", "index": 8, "metrics": [{"label": "MoneyCost", "value": 400000}, {"label": "Playtime (hours)", "value": 300}, {"label": "Jobs combined total level", "value": 220}, {"label": "Distance traveled", "value": 400000}, {"label": "Blocks mined", "value": 300000}, {"label": "Blocks placed", "value": 180000}, {"label": "Items crafted", "value": 40000}, {"label": "Monster kills", "value": 10000}, {"label": "Animals bred", "value": 300}], "requirements": "Meet every requirement below. MoneyCost uses in-game economy currency.", "perks": null}];
+export const premiumRanks = [{name:"Ascendant",price:199},{name:"Mythic",price:299},{name:"Legend",price:499}];
 export const premiumDuration = "One month";

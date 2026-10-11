@@ -8,7 +8,7 @@ import { CopyButton } from "./CopyButton";
 export function Footer() {
   const config = readPublicConfig();
   const java = config.javaAddress
-    ? `${config.javaAddress}${config.javaPort ? `:${config.javaPort}` : ""}`
+    ? config.javaAddress
     : "";
   return (
     <footer className="site-footer">
@@ -83,7 +83,7 @@ export function Footer() {
             <nav key={group.label} aria-label={`${group.label} footer`}>
               <h2>{group.label}</h2>
               {group.links.map((link) => (
-                <Link key={link.href} href={link.href}>
+                <Link key={link.href} href={link.href} target={link.href.startsWith("https:") ? "_blank" : undefined} rel={link.href.startsWith("https:") ? "noopener noreferrer" : undefined}>
                   {link.label}
                 </Link>
               ))}

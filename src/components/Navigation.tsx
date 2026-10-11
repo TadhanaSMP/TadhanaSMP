@@ -31,6 +31,8 @@ export function Navigation() {
                 {group.links.map((link) => (
                   <Link
                     href={link.href}
+                    target={link.href.startsWith("https:") ? "_blank" : undefined}
+                    rel={link.href.startsWith("https:") ? "noopener noreferrer" : undefined}
                     key={link.href}
                     onClick={(event) => {
                       const details = event.currentTarget.closest("details");
@@ -87,6 +89,8 @@ export function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
+                    target={link.href.startsWith("https:") ? "_blank" : undefined}
+                    rel={link.href.startsWith("https:") ? "noopener noreferrer" : undefined}
                   onClick={() => dialog.current?.close()}
                 >
                   {link.label}

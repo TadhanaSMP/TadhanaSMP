@@ -14,13 +14,12 @@ export default function Status() {
       <PageHeading
         eyebrow="Server status"
         title="Know before you connect."
-        description="A clear view of the server’s availability. Manual maintenance notices take priority over live status."
+        description="A clear view of the server’s availability. Java and Bedrock are checked independently. Maintenance notices are shown separately."
       />
       <div className="status-layout">
         <StatusIndicator
           expanded
-          maintenance={config.maintenance}
-          notice={config.maintenanceNotice}
+          config={config}
         />
         <div className="prose">
           <h2>Keep the latest chapter close.</h2>

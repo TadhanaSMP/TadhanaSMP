@@ -1,3 +1,4 @@
+import { AnnouncementFeed } from "@/components/AnnouncementFeed";
 import Link from "next/link";
 import { Newspaper, ArrowUpRight } from "lucide-react";
 import { PageHeading } from "@/components/PageHeading";
@@ -19,6 +20,7 @@ export default function News() {
         title="The next page of the story."
         description="Confirmed updates belong here. No guessed reopening dates, countdowns, or unannounced events."
       />
+      <AnnouncementFeed />
       {posts.length ? (
         <div className="news-list">
           {posts.map((post) => (

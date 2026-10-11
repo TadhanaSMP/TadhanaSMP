@@ -1,65 +1,32 @@
 import "server-only";
-import {
-  approvedStatusUrl,
-  normalizeStatus,
-  type StatusState,
-} from "./validation.mjs";
+import { createHash } from "node:crypto";
+import { unstable_cache } from "next/cache";
 import { readPublicConfig } from "@/config/server";
-export type ServerStatus = {
-  state: StatusState;
-  players: number | null;
-  maximum: number | null;
-  checkedAt: string | null;
-  notice: string | null;
-};
-const unknown: ServerStatus = {
-  state: "unknown",
-  players: null,
-  maximum: null,
-  checkedAt: null,
-  notice: null,
-};
-let cache: { expires: number; data: ServerStatus } | null = null;
-let pending: Promise<ServerStatus> | null = null;
-export async function readStatus(): Promise<ServerStatus> {
+import { approvedStatusUrl } from "./validation.mjs";
+import { createProbeCache, unavailable, withStaleness } from "./status-core.mjs";
+const probe = createProbeCache();
+export async function readDualStatus() {
   const config = readPublicConfig();
-  if (config.maintenance)
-    return {
-      ...unknown,
-      state: "maintenance",
-      notice: config.maintenanceNotice,
-    };
-  const endpoint = approvedStatusUrl(process.env.STATUS_ENDPOINT || "");
-  if (!endpoint) return unknown;
-  if (cache && cache.expires > Date.now()) return cache.data;
-  if (pending) return pending;
-  pending = (async () => {
-    let data = unknown;
-    try {
-      const result = await fetch(endpoint, {
-        cache: "no-store",
-        redirect: "error",
-        signal: AbortSignal.timeout(5000),
-        headers: { Accept: "application/json" },
-      });
-      if (result.ok) {
-        const status = normalizeStatus(await result.json());
-        if (status.state !== "unknown")
-          data = {
-            ...status,
-            checkedAt: new Date().toISOString(),
-            notice: null,
-          };
-      }
-    } catch {
-      /* Fail closed to unknown, never an invented online/offline state. */
+  const trusted = process.env.STATUS_SOURCE === "trusted";
+  const token = process.env.STATUS_MONITOR_TOKEN || "";
+  async function edition(name: "java" | "bedrock") {
+    const host = name === "java" ? config.javaAddress : config.bedrockAddress;
+    const port = name === "java" ? config.javaPort : config.bedrockPort;
+    let url = `https://api.mcstatus.io/v2/status/${name}/${encodeURIComponent(host + (port ? `:${port}` : ""))}`;
+    if (trusted) {
+      url = approvedStatusUrl(process.env[name === "java" ? "STATUS_JAVA_ENDPOINT" : "STATUS_BEDROCK_ENDPOINT"] || "");
+      if (!url || new URL(url).hostname !== process.env.STATUS_MONITOR_HOST || token.length < 32) return unavailable(host, port, "monitor-not-configured");
     }
-    cache = { expires: Date.now() + 30000, data };
-    return data;
-  })();
-  try {
-    return await pending;
-  } finally {
-    pending = null;
+    const key = createHash("sha256").update(`${name}:${url}:${trusted ? token : "public"}`).digest("hex");
+    const read = unstable_cache(() => probe(key, url, host, port, trusted ? { Authorization: `Bearer ${token}` } : {}, trusted), ["status-v2", key], { revalidate: 90 });
+    return withStaleness(await read());
   }
+  const [java, bedrock] = await Promise.all([edition("java"), edition("bedrock")]);
+  return { java, bedrock, maintenance: { enabled: config.maintenance, scheduled: config.scheduledMaintenance, message: config.maintenanceNotice }, refreshedAt: new Date().toISOString() };
 }
+export type DualStatus = Awaited<ReturnType<typeof readDualStatus>>;
+export async function readStatus() {
+  const data = await readDualStatus(), state = data.maintenance.enabled ? "maintenance" : data.java.stale ? "unknown" : data.java.status;
+  return { state, players: state === "online" ? data.java.players : null, maximum: state === "online" ? data.java.maximum : null, checkedAt: data.java.checkedAt, notice: data.maintenance.enabled ? data.maintenance.message : null };
+}
+export type ServerStatus = Awaited<ReturnType<typeof readStatus>>;
