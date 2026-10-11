@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>TadhanaSMP responsive QA</title
+  ><style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #ddd;
+      color: #111;
+      font: 14px system-ui;
+    }
+    header {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    label {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+    }
+    select,
+    button {
+      font: inherit;
+      padding: 7px;
+    }
+    #stage {
+      overflow: auto;
+      margin-top: 20px;
+    }
+    iframe {
+      height: 820px;
+      border: 0;
+      background: #080919;
+      display: block;
+    }
+    pre {
+      white-space: pre-wrap;
+      padding: 12px;
+      background: #fff;
+    }
+    summary {
+      cursor: pointer;
+    }
+  </style>
+  <header>
+    <h1>Responsive QA</h1>
+    <label
+      >Page
+      <select id="page">
+        <option value="/">Home</option>
+        <option>/world</option>
+        <option>/our-story</option>
+        <option>/features</option>
+        <option>/memories</option>
+        <option>/play</option>
+        <option>/ranks</option>
+        <option>/news</option>
+        <option>/rules</option>
+        <option>/faq</option>
+        <option>/status</option>
+        <option>/support</option>
+        <option>/store</option>
+        <option>/privacy</option>
+        <option>/terms</option>
+        <option>/cookies</option>
+        <option>/qa-components</option>
+      </select></label
+    ><label
+      >Viewport width
+      <select id="width">
+        <option>320</option>
+        <option>375</option>
+        <option>390</option>
+        <option>430</option>
+        <option>768</option>
+        <option>1024</option>
+        <option selected>1440</option>
+        <option>1920</option>
+      </select></label
+    ><button id="inspect">Inspect layout</button
+    ><button id="scan">Scan page images</button
+    ><button id="scripts">Inspect client scripts</button
+    ><button id="swipe-left">Simulate swipe left</button
+    ><button id="swipe-right">Simulate swipe right</button>
+  </header>
+  <details open>
+    <summary>Layout result</summary>
+    <pre id="result">Waiting for frame.</pre>
+  </details>
+  <div id="stage">
+    <iframe id="preview" title="Website under test" src="/"></iframe>
+  </div>
+  <script>
+    const frame = document.getElementById("preview"),
+      page = document.getElementById("page"),
+      width = document.getElementById("width"),
+      result = document.getElementById("result");
+    const fit = () => {
+      frame.style.width = width.value + "px";
+    };
+    fit();
+    page.addEventListener("change", () => {
+      result.textContent = "Loading " + page.value;
+      frame.src = page.value;
+    });
+    width.addEventListener("change", fit);
+    async function inspect() {
+      const doc = frame.contentDocument,
+        win = frame.contentWindow;
+      if (!doc) return;
+      await doc.fonts.ready;
+      const root = doc.documentElement;
+      const styles = Array.from(
+        doc.querySelectorAll("link[rel=stylesheet]"),
+      ).every((link) => !!link.sheet);
+      const out = {
+        path: win.location.pathname,
+        viewportWidth: win.innerWidth,
+        width: root.clientWidth,
+        scrollWidth: root.scrollWidth,
+        stylesLoaded: styles,
+        h1: doc.querySelector("h1")?.textContent,
+        brokenImages: Array.from(doc.images)
+          .filter((img) => img.complete && !img.naturalWidth)
+          .map((img) => img.getAttribute("src")),
+        overflowing: Array.from(
+          doc.querySelectorAll("main *,header *,footer *"),
+        )
+          .filter((el) => {
+            const r = el.getBoundingClientRect();
+            return (
+              r.width > 0 &&
+              r.height > 0 &&
+              !el.closest(
+                ".rank-tabs,.cookie-table-wrap,.nav-popover,dialog",
+              ) &&
+              (r.left < -0.5 || r.right > root.clientWidth + 0.5)
+            );
+          })
+          .slice(0, 10)
+          .map((el) => ({
+            tag: el.tagName,
+            class: el.className,
+            text: el.textContent.slice(0, 60),
+          })),
+      };
+      result.textContent = JSON.stringify(out, null, 2);
+    }
+    document.getElementById("inspect").addEventListener("click", inspect);
+    frame.addEventListener("load", inspect);
+    document.getElementById("scan").addEventListener("click", async () => {
+      const doc = frame.contentDocument,
+        win = frame.contentWindow;
+      const position = win.scrollY;
+      for (let y = 0; y < doc.documentElement.scrollHeight; y += 650) {
+        win.scrollTo(0, y);
+        await new Promise((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(resolve)),
+        );
+      }
+      win.scrollTo(0, position);
+      await inspect();
+    });
+    document.getElementById("scripts").addEventListener("click", async () => {
+      result.textContent = "Checking client scripts...";
+      const urls = Array.from(frame.contentDocument.scripts)
+        .map((s) => s.src)
+        .filter(Boolean);
+      const data = await Promise.all(
+        urls.map(async (url) => {
+          try {
+            const r = await fetch(url, { signal: AbortSignal.timeout(5000) });
+            const body = await r.text();
+            return {
+              url: new URL(url).pathname,
+              status: r.status,
+              type: r.headers.get("content-type"),
+              bytes: body.length,
+              prefix: body.slice(0, 45),
+            };
+          } catch (e) {
+            return { url, error: e.message };
+          }
+        }),
+      );
+      result.textContent = JSON.stringify(data, null, 2);
+    });
+    function simulateSwipe(direction) {
+      const win = frame.contentWindow,
+        target = frame.contentDocument.querySelector(
+          ".lightbox[open] .lightbox-image",
+        );
+      if (!target) {
+        result.textContent =
+          "Open a gallery image before simulating a touch gesture.";
+        return;
+      }
+      const start = new win.Touch({
+        identifier: 1,
+        target,
+        clientX: direction === "left" ? 240 : 80,
+        clientY: 100,
+      });
+      const end = new win.Touch({
+        identifier: 1,
+        target,
+        clientX: direction === "left" ? 80 : 240,
+        clientY: 100,
+      });
+      target.dispatchEvent(
+        new win.TouchEvent("touchstart", {
+          bubbles: true,
+          touches: [start],
+          changedTouches: [start],
+        }),
+      );
+      target.dispatchEvent(
+        new win.TouchEvent("touchend", {
+          bubbles: true,
+          touches: [],
+          changedTouches: [end],
+        }),
+      );
+      result.textContent =
+        "Simulated " +
+        direction +
+        " touch gesture dispatched. This is not a physical-device check.";
+    }
+    document
+      .getElementById("swipe-left")
+      .addEventListener("click", () => simulateSwipe("left"));
+    document
+      .getElementById("swipe-right")
+      .addEventListener("click", () => simulateSwipe("right"));
+  </script>
+</html>

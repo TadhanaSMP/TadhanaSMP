@@ -1,0 +1,9 @@
+# Local browser fixtures
+
+These fixtures are never production routes. `responsive.html` hosts the real website in a same-origin iframe with exact CSS viewport widths: 320, 375, 390, 430, 768, 1024, 1440, 1920. Its inspector measures document/client/scroll dimensions, headings, stylesheet readiness, visible overflowing elements, and broken loaded images. Internal horizontal rank/table scroll areas are intentional. A normal vertical scrollbar reduces document client width by about 15px; it is not a failed viewport test.
+
+For repeat checks, copy responsive.html temporarily to public/qa.html. Copy clipboard-page.tsx temporarily to src/app/qa-components/page.tsx. Start the development server and open /qa.html; select routes/widths and Inspect layout. Scan page images scrolls through the entire iframe to load lazy images. Native browser keyboard/mouse actions can then test the frame’s actual controls. The clipboard page runs the real PlayGuide with reserved example.test hostnames and deliberately different Java/Bedrock ports, never real server details.
+
+After copying the reserved example addresses, Enable clipboard denial fixture deliberately rejects the actual Clipboard API promise to check the manual-copy fallback. Switching editions must clear success feedback for the previous address. The harness swipe buttons dispatch simulated TouchEvents to the real lightbox; this verifies handler behavior, not touch hardware.
+
+Remove public/qa.html and src/app/qa-components before the final production build. The release smoke test must confirm /qa.html and /qa-components return 404. These are desktop browser CSS-viewport tests, not physical devices, touch hardware, or measured Lighthouse/CrUX. Clipboard permission and reduced-motion preference require appropriate real browser/device verification in addition to code review.
