@@ -1,0 +1,1286 @@
+{
+  "checkedAt": "2026-10-11",
+  "method": "Cloud Chrome same-origin iframe CSS viewport tests; not physical devices",
+  "results": [
+    {
+      "path": "/memories",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "The world changes. The moments stay.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/memories",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "The world changes. The moments stay.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/memories",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "The world changes. The moments stay.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/memories",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "The world changes. The moments stay.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/memories",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "The world changes. The moments stay.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/memories",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "The world changes. The moments stay.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/memories",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "The world changes. The moments stay.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/memories",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "The world changes. The moments stay.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/world",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "A world written together.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/world",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "A world written together.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/world",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "A world written together.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/world",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "A world written together.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/world",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "A world written together.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/world",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "A world written together.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/world",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "A world written together.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/world",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "A world written together.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/our-story",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "A shared destiny. A world of our own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/our-story",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "A shared destiny. A world of our own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/our-story",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "A shared destiny. A world of our own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/our-story",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "A shared destiny. A world of our own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/our-story",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "A shared destiny. A world of our own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/our-story",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "A shared destiny. A world of our own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/our-story",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "A shared destiny. A world of our own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/our-story",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "A shared destiny. A world of our own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/features",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Make the world your own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/features",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Make the world your own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/features",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Make the world your own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/features",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Make the world your own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/features",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Make the world your own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/features",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Make the world your own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/features",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Make the world your own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/features",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Make the world your own.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/play",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Your next chapter starts here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/play",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Your next chapter starts here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/play",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Your next chapter starts here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/play",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Your next chapter starts here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/play",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Your next chapter starts here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/play",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Your next chapter starts here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/ranks",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Every chapter takes you further.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/ranks",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Every chapter takes you further.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/ranks",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Every chapter takes you further.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/ranks",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Every chapter takes you further.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/ranks",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Every chapter takes you further.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/ranks",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Every chapter takes you further.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/ranks",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Every chapter takes you further.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/ranks",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Every chapter takes you further.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/news",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "The next page of the story.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/news",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "The next page of the story.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/news",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "The next page of the story.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/news",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "The next page of the story.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/news",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "The next page of the story.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/news",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "The next page of the story.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/news",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "The next page of the story.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/news",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "The next page of the story.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/rules",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Make it a good place to return to.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/rules",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Make it a good place to return to.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/rules",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Make it a good place to return to.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/rules",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Make it a good place to return to.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/rules",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Make it a good place to return to.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/rules",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Make it a good place to return to.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/rules",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Make it a good place to return to.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/rules",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Make it a good place to return to.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/faq",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "A few things before you begin.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/faq",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "A few things before you begin.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/faq",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "A few things before you begin.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/faq",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "A few things before you begin.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/faq",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "A few things before you begin.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/faq",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "A few things before you begin.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/faq",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "A few things before you begin.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/faq",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "A few things before you begin.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/status",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Know before you connect.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/status",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Know before you connect.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/status",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Know before you connect.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/status",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Know before you connect.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/status",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Know before you connect.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/status",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Know before you connect.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/status",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Know before you connect.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/status",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Know before you connect.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/support",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "You don’t have to figure it out alone.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/support",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "You don’t have to figure it out alone.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/support",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "You don’t have to figure it out alone.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/support",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "You don’t have to figure it out alone.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/support",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "You don’t have to figure it out alone.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/support",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "You don’t have to figure it out alone.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/support",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "You don’t have to figure it out alone.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/support",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "You don’t have to figure it out alone.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/store",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Support the story, clearly.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/store",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Support the story, clearly.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/store",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Support the story, clearly.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/store",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Support the story, clearly.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/store",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Support the story, clearly.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/store",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Support the story, clearly.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/store",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Support the story, clearly.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/store",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Support the story, clearly.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/privacy",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Your information deserves care.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/privacy",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Your information deserves care.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/privacy",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Your information deserves care.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/privacy",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Your information deserves care.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/privacy",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Your information deserves care.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/privacy",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Your information deserves care.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/privacy",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Your information deserves care.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/privacy",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Your information deserves care.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/terms",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "A shared world. Clear expectations.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/terms",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "A shared world. Clear expectations.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/terms",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "A shared world. Clear expectations.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/terms",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "A shared world. Clear expectations.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/terms",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "A shared world. Clear expectations.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/terms",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "A shared world. Clear expectations.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/terms",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "A shared world. Clear expectations.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/terms",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "A shared world. Clear expectations.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/cookies",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Only what the session needs.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/cookies",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Only what the session needs.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/cookies",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Only what the session needs.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/cookies",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Only what the session needs.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/cookies",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Only what the session needs.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/cookies",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Only what the session needs.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/cookies",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Only what the session needs.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/cookies",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Only what the session needs.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Your storybegins here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Your storybegins here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/",
+      "viewportWidth": 390,
+      "width": 375,
+      "scrollWidth": 375,
+      "stylesLoaded": true,
+      "h1": "Your storybegins here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/",
+      "viewportWidth": 430,
+      "width": 415,
+      "scrollWidth": 415,
+      "stylesLoaded": true,
+      "h1": "Your storybegins here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/",
+      "viewportWidth": 768,
+      "width": 753,
+      "scrollWidth": 753,
+      "stylesLoaded": true,
+      "h1": "Your storybegins here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/",
+      "viewportWidth": 1024,
+      "width": 1009,
+      "scrollWidth": 1009,
+      "stylesLoaded": true,
+      "h1": "Your storybegins here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/",
+      "viewportWidth": 1440,
+      "width": 1425,
+      "scrollWidth": 1425,
+      "stylesLoaded": true,
+      "h1": "Your storybegins here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/",
+      "viewportWidth": 1920,
+      "width": 1905,
+      "scrollWidth": 1905,
+      "stylesLoaded": true,
+      "h1": "Your storybegins here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/play",
+      "viewportWidth": 320,
+      "width": 305,
+      "scrollWidth": 305,
+      "stylesLoaded": true,
+      "h1": "Your next chapter starts here.",
+      "brokenImages": [],
+      "overflowing": []
+    },
+    {
+      "path": "/play",
+      "viewportWidth": 375,
+      "width": 360,
+      "scrollWidth": 360,
+      "stylesLoaded": true,
+      "h1": "Your next chapter starts here.",
+      "brokenImages": [],
+      "overflowing": []
+    }
+  ]
+}

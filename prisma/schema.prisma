@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+model OTP {
+  id String @id @default(cuid())
+  code String @unique
+  codeHash String @unique
+  discordId String
+  expiresAt DateTime
+  used Boolean @default(false)
+  usedAt DateTime?
+  createdAt DateTime @default(now())
+  @@index([discordId])
+  @@index([expiresAt])
+}
+model WebSession {
+  tokenHash String @id
+  discordId String
+  username String
+  globalName String?
+  avatar String?
+  verified Boolean @default(false)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  @@index([expiresAt])
+}
+model RateLimitBucket {
+  key String @id
+  count Int @default(1)
+  expiresAt DateTime
+  @@index([expiresAt])
+}
